@@ -1,8 +1,7 @@
-import '../util/module-alias';
+
 import { Server } from '@overnightjs/core'
+import { AllControllers } from '../controllers/controllers-Archives/AllControllers';
 import bodyParser from 'body-parser';
-import { RouterGet } from './routers/Router.get';
-import { RouterPost } from './routers/Router.post';
 
 
 export class SetupServer extends Server {
@@ -16,9 +15,16 @@ export class SetupServer extends Server {
     }
     private setupExpress (): void{
       this.app.use(bodyParser.json())
+      this.app.use(bodyParser.urlencoded({extended: true}))
+      this.setupControllers()
       this.app.listen(this.port,() =>{
         console.log('Servidor On')
       })
+    }
+    private setupControllers() {
+    
+      const allControllers = new AllControllers()
+      super.addControllers(allControllers.allControllers())
     }
 }
 

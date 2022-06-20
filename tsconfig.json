@@ -3,7 +3,7 @@
     "target": "es2020",
     "moduleResolution": "node",
     "module": "commonjs",
-    "lib": ["es2020"],
+    "lib": ["es2020","DOM"],
     "sourceMap": true,
     "outDir": "dist",
     "strict": true,
@@ -32,8 +32,8 @@
   },
   "include": [
     "./src/**/*.ts",
-    "./test/**/*.ts"
-  ],
+    "./test/**/*.ts", 
+    "src/js/ObjPessoa.js", "src/js/cadastro.js"],
   "exclude": [
     "./node_modules/*",
     "dist"

@@ -1,8 +1,17 @@
-import { IController } from "./IControllers";
 
-export class ClienteController implements IController{
-  private add(){
-    return Promise<void>
-  }
-  
+
+import { Controller, Get, Post } from '@overnightjs/core';
+import { Request, Response} from 'express'
+import { Cliente } from '../../model/Cliente';
+
+const url = 'client'
+
+@Controller(url)
+export class ClientController {
+    private cliente :Cliente
+
+    @Post('add')
+    private addClienteBD(cliente :Cliente){
+
+    }
 }
