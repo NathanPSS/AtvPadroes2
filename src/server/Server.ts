@@ -15,7 +15,7 @@ export class SetupServer extends Server {
     }
     private setupExpress (): void{
       this.app.use(bodyParser.json())
-      this.app.use(bodyParser.urlencoded({extended: true}))
+      this.app.use(bodyParser.urlencoded({extended: false}))
       this.setupControllers()
       this.app.listen(this.port,() =>{
         console.log('Servidor On')

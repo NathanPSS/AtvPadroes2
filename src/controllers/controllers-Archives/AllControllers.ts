@@ -1,3 +1,6 @@
+import { ClientPostgree } from '../../server/clients/PostGree/PostGree';
+import { CadastroController } from '../controllers-BD/CadastroController';
+import { LoginController } from '../controllers-BD/LoginController';
 import { AtualizaEstoqueControllerHTML } from './controllers-HTML/AtualizaEstoque';
 import { CadastroControllerHTML } from './controllers-HTML/Cadastro';
 import { HomeControllerHTML } from './controllers-HTML/Home';
@@ -6,7 +9,8 @@ import { LoginLojaControllerHTML } from './controllers-HTML/LoginLoja';
 import { LojasControllerHTML } from './controllers-HTML/Lojas';
 import { PedidosControllerHTML } from './controllers-HTML/Pedidos';
 import { PesquisaLojaControllerHTML } from './controllers-HTML/PesquisaLoja';
-import { CadastroPessoaControllerJS } from './controllers-JS/Cadastro';
+
+
 
 
 
@@ -21,7 +25,9 @@ export class AllControllers {
             new LojasControllerHTML(),
             new PedidosControllerHTML(),
             new PesquisaLojaControllerHTML(),
-            new CadastroPessoaControllerJS(),
+            new CadastroController(),
+            new ClientPostgree(),
+            new LoginController(),
         ]
     }
 }

@@ -28,12 +28,12 @@
       "./test"
     ],
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
+    "emitDecoratorMetadata": true,
   },
   "include": [
     "./src/**/*.ts",
     "./test/**/*.ts", 
-    "src/js/ObjPessoa.js", "src/js/cadastro.js"],
+    "src/js/ObjPessoa.js", "src/js/DOM-Data/cadastro.js"],
   "exclude": [
     "./node_modules/*",
     "dist"
